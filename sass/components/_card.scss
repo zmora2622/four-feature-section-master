@@ -1,0 +1,77 @@
+@use "../utils/variables" as v;
+
+.card {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ width: clamp(
+  v.$card-min-w,
+  calc(v.$card-min-w - 0.8583rem) + 3.662vw,
+  v.$card-max-w
+ );
+ border-radius: v.$radius;
+ //  padding: 26px 27px 28px 30px;
+ padding: 30px 32px 32px 32px;
+ background-color: v.$card-bg-color;
+ overflow: hidden;
+ box-shadow: 0px 15px 20px v.$shadow;
+
+ &::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: v.$card-border-cyan;
+ }
+}
+.card--border-red {
+ &::before {
+  background-color: v.$card-border-red;
+ }
+}
+
+.card--border-orange {
+ &::before {
+  background-color: v.$card-border-orange;
+ }
+}
+
+.card--border-blue {
+ &::before {
+  background-color: v.$card-border-blue;
+ }
+}
+
+.card__title {
+ font-size: v.$font-size-md;
+ font-weight: v.$font-semi-bold;
+ color: v.$header-text-color;
+}
+
+.card__description {
+ margin-top: clamp(
+  v.$card-description-mt-min,
+  calc(v.$card-description-mt-min - 0.3125rem) + 1vw,
+  v.$card-description-mt-max
+ );
+ font-size: v.$font-size-xs;
+ letter-spacing: v.$letter-spacing-tight;
+ font-weight: v.$font-regular;
+ line-height: 1.75;
+}
+
+.card__image {
+ width: clamp(
+  v.$img-min-w,
+  calc(v.$img-min-w - 0.3646rem) + 1.1667vw,
+  v.$img-max-w
+ );
+ margin-top: clamp(
+  v.$card-img-mt-min,
+  calc(v.$card-img-mt-min - 0.3646rem) + 1.1667vw,
+  v.$card-img-mt-max
+ );
+ align-self: flex-end;
+}

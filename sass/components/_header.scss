@@ -1,0 +1,59 @@
+@use "../utils/variables" as v;
+.header {
+ //grow 311px to 540px from 375px to 1440px
+ width: clamp(
+  v.$header-min-w,
+  calc(v.$header-min-w - 5.0396rem) + 21.5023vw,
+  v.$header-max-w
+ );
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ row-gap: 16px;
+ //  row-gap: 15px;
+}
+
+.header__title {
+ display: flex;
+ flex-direction: column;
+ font-weight: v.$font-extra-light;
+ //grow from 24-32px between 375-1440px
+ font-size: clamp(
+  v.$font-size-lg,
+  calc(v.$font-size-lg - 0.2641rem) + 1.1268vw,
+  v.$font-size-xl
+ );
+ text-align: left;
+ letter-spacing: v.$letter-spacing-wide;
+ color: v.$header-text-color;
+}
+
+.header__title--bold-margin {
+ margin-top: clamp(
+  v.$header-title-margin-min,
+  calc(v.$header-title-margin-min + 1.6875rem) - 3vw,
+  v.$header-title-margin-max
+ );
+ //  margin-left: 1px;
+ text-align: center;
+ font-weight: v.$font-semi-bold;
+ letter-spacing: clamp(
+  v.$letter-spacing-wide,
+  calc(v.$letter-spacing-wide - 0.0225rem) + 0.04vw,
+  v.$letter-spacing-wider
+ );
+}
+
+.header__description {
+ margin-top: 1px;
+ font-size: v.$font-size-sm;
+ text-align: center;
+ line-height: 1.65;
+ letter-spacing: v.$letter-spacing-tight;
+}
+
+@media (width>1100px) {
+ .header__title--bold-margin {
+  //    margin-top: -4px;
+ }
+}

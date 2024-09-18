@@ -1,0 +1,72 @@
+@use "./functions" as f;
+
+/* color palette */
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$very-dark-blue: hsl(232, 12%, 34%);
+
+$grayish-blue: hsl(229, 6%, 66%);
+$gray: hsl(215, 41%, 89%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+/* Font sizes */
+
+$font-size-xl: f.to_rem(36px);
+$font-size-lg: f.to_rem(24px);
+$font-size-md: f.to_rem(20px);
+$font-size-sm: f.to_rem(15px);
+$font-size-xs: f.to_rem(13px);
+
+/* Letter spacing */
+
+$letter-spacing-tight: f.to_rem(0.09px);
+$letter-spacing-normal: f.to_rem(0.1px);
+$letter-spacing-wide: f.to_rem(0.17px);
+$letter-spacing-wider: f.to_rem(0.25px);
+
+/* Font weight*/
+
+$font-extra-light: 200;
+$font-regular: 400;
+$font-semi-bold: 600;
+
+/* min-max container sizes */
+
+$img-min-w: f.to_rem(57px);
+$img-max-w: f.to_rem(64px);
+$card-min-w: f.to_rem(311px);
+$card-max-w: f.to_rem(350px);
+$header-min-w: f.to_rem(311px);
+$header-max-w: f.to_rem(540px);
+$card-container-min-w: f.to_rem(311px);
+$card-container-max-w: f.to_rem(1110px);
+
+/* Declaring colors for site elements */
+
+$bg-color: $very-light-gray;
+$text-color: $grayish-blue;
+$card-bg-color: $white;
+$card-border-cyan: $cyan;
+$card-border-red: $red;
+$card-border-orange: $orange;
+$card-border-blue: $blue;
+$header-text-color: $very-dark-blue;
+$shadow: $gray;
+
+/* distances between elements */
+$header-title-margin-min: f.to_rem(-4px);
+$header-title-margin-max: f.to_rem(2px);
+$cards-container-margin-top-min: f.to_rem(62px);
+$cards-container-margin-top-max: f.to_rem(75px);
+$card-description-mt-min: f.to_rem(4px);
+$card-description-mt-max: f.to_rem(10px);
+$card-img-mt-min: f.to_rem(31px);
+$card-img-mt-max: f.to_rem(38px);
+$content-cards-column-gap-min: f.to_rem(24px);
+$content-cards-column-gap-max: f.to_rem(30px);
+$radius: f.to_rem(8px);

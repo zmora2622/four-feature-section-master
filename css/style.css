@@ -1,0 +1,217 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100svh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* color palette */
+/* Font sizes */
+/* Letter spacing */
+/* Font weight*/
+/* min-max container sizes */
+/* Declaring colors for site elements */
+/* distances between elements */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(229, 6%, 66%);
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: clamp(19.4375rem, 19.4375rem - 0.8583rem + 3.662vw, 21.875rem);
+  border-radius: 0.5rem;
+  padding: 30px 32px 32px 32px;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  box-shadow: 0px 15px 20px hsl(215, 41%, 89%);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: hsl(180, 62%, 55%);
+}
+
+.card--border-red::before {
+  background-color: hsl(0, 78%, 62%);
+}
+
+.card--border-orange::before {
+  background-color: hsl(34, 97%, 64%);
+}
+
+.card--border-blue::before {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(232, 12%, 34%);
+}
+
+.card__description {
+  margin-top: clamp(0.25rem, 0.25rem - 0.3125rem + 1vw, 0.625rem);
+  font-size: 0.8125rem;
+  letter-spacing: 0.005625rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.card__image {
+  width: clamp(3.5625rem, 3.5625rem - 0.3646rem + 1.1667vw, 4rem);
+  margin-top: clamp(1.9375rem, 1.9375rem - 0.3646rem + 1.1667vw, 2.375rem);
+  align-self: flex-end;
+}
+
+.header {
+  width: clamp(19.4375rem, 19.4375rem - 5.0396rem + 21.5023vw, 33.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  font-size: clamp(1.5rem, 1.5rem - 0.2641rem + 1.1268vw, 2.25rem);
+  text-align: left;
+  letter-spacing: 0.010625rem;
+  color: hsl(232, 12%, 34%);
+}
+
+.header__title--bold-margin {
+  margin-top: clamp(-0.25rem, -0.25rem + 1.6875rem - 3vw, 0.125rem);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: clamp(0.010625rem, 0.010625rem - 0.0225rem + 0.04vw, 0.015625rem);
+}
+
+.header__description {
+  margin-top: 1px;
+  font-size: 0.9375rem;
+  text-align: center;
+  line-height: 1.65;
+  letter-spacing: 0.005625rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 25px;
+  margin-top: clamp(3.875rem, 4.6875rem - 2.1667vw + 0.6771rem, 4.6875rem);
+}
+
+.content__cards-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(1.5rem, 1.5rem - 0.3125rem + 1vw, 1.875rem);
+}
+
+@media (width > 1100px) {
+  .content__cards {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+}
